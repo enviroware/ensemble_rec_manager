@@ -163,14 +163,11 @@ foreach my $mo (@models) {
                                               0,0,$it_lst*$sq_json{dt_out},0);
                 my $tdate_lst = sprintf "%.4d-%.2d-%.2d".'T'."%.2d:%.2d:00", @t_date_lst[0..4];
 
-                my $valp = $missing;
                 my $idx_utc = $it_lst - $dutc + 1;
-                if ($idx_utc < 0) {
-                } else {
-                    $valp = sprintf "%.${decimals}f", $values[$idx_utc];
-                }               
-                print OUT "$valp,$fdate_lst,$tdate_lst\n";
-                print "$valp,$fdate_lst,$tdate_lst\n";
+                my $valp = ($idx_utc < 0 or $idx_utc > $#ts) ? $missing : $values[$idx_utc];
+                my $valpout = sprintf "%.${decimals}f", $valp;
+                print OUT "$valpout,$fdate_lst,$tdate_lst\n";
+                print "$valpout,$fdate_lst,$tdate_lst\n";
 
                 $fdate_lst = $tdate_lst;
             }
