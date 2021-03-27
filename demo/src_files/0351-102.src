@@ -1,0 +1,150 @@
+Enform version                  $ 20190101
+Enform type                     $ AQ
+Random key                      $ IZ6EWGS
+Sequence number                 $ 0351
+Case number                     $ 102
+Creation date (UTC)             $ 202011161741
+Title                           $ AQMEII4 EU2010 GRID - O3 Net Gas Dry Deposition Parameters
+#
+Coordinates (LL or UTM)         $ LL
+Xmin (deg E or m)               $      -30.0000
+Ymin (deg E or m)               $       25.0000
+Nx                              $ 721
+Ny                              $ 361
+Dx (deg or m)                   $        0.1250
+Dy (deg or m)                   $        0.1250
+#
+First output (UTC)              $ 201001010100
+Time horizon of forecast (UTC)  $ 201101010000
+Number of outputs               $  8760
+Dt_out, Dt_start, Dt_end (min)  $    60     0    60 
+#
+Number of variables             $ 18
+#
+Variable                        $ VD-O3
+Code                            $ 01
+Number of items                 $ 1
+Item                            $ 01, Net Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-O3
+Code                            $ 02
+Number of items                 $ 1
+Item                            $ 01, Net Surface Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-O3
+Code                            $ 03
+Number of items                 $ 1
+Item                            $ 01, Net Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-O3
+Code                            $ 04
+Number of items                 $ 1
+Item                            $ 01, Net Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-O3
+Code                            $ 05
+Number of items                 $ 1
+Item                            $ 01, Net Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-O3
+Code                            $ 06
+Number of items                 $ 1
+Item                            $ 01, Net Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-O3
+Code                            $ 07
+Number of items                 $ 1
+Item                            $ 01, Net Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-O3
+Code                            $ 08
+Number of items                 $ 1
+Item                            $ 01, Net Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-O3
+Code                            $ 09
+Number of items                 $ 1
+Item                            $ 01, Net Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-O3
+Code                            $ 10
+Number of items                 $ 1
+Item                            $ 01, Net Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-O3
+Code                            $ 11
+Number of items                 $ 1
+Item                            $ 01, Net Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-O3
+Code                            $ 12
+Number of items                 $ 1
+Item                            $ 01, Net Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-O3
+Code                            $ 13
+Number of items                 $ 1
+Item                            $ 01, Net Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-O3
+Code                            $ 14
+Number of items                 $ 1
+Item                            $ 01, Net Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ DFLX-LCAN-O3
+Code                            $ 15
+Number of items                 $ 1
+Item                            $ 01, Net Flux via Lower Canopy Pathway, g ha-1, 0.0001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ M, INT
+#
+Variable                        $ DFLX-ST-O3
+Code                            $ 16
+Number of items                 $ 1
+Item                            $ 01, Net Flux via Stomatal Pathway, g ha-1, 0.0001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ M, INT
+#
+Variable                        $ DFLX-CUT-O3
+Code                            $ 17
+Number of items                 $ 1
+Item                            $ 01, Net Flux via Cuticle Pathway, g ha-1, 0.0001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ M, INT
+#
+Variable                        $ DFLX-SOIL-O3
+Code                            $ 18
+Number of items                 $ 1
+Item                            $ 01, Net Flux via Soil Pathway, g ha-1, 0.0001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ M, INT
+#
+Comments follow                 $ N

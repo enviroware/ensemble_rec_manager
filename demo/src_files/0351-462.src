@@ -1,0 +1,136 @@
+Enform version                  $ 20190101
+Enform type                     $ AQ
+Random key                      $ LPWTSMR
+Sequence number                 $ 0351
+Case number                     $ 462
+Creation date (UTC)             $ 202011161741
+Title                           $ AQMEII4 EU2010 GRID - AQMEII4 Land Type Categories
+#
+Coordinates (LL or UTM)         $ LL
+Xmin (deg E or m)               $      -30.0000
+Ymin (deg E or m)               $       25.0000
+Nx                              $ 721
+Ny                              $ 361
+Dx (deg or m)                   $        0.1250
+Dy (deg or m)                   $        0.1250
+#
+First output (UTC)              $ 201001010100
+Time horizon of forecast (UTC)  $ 201101010000
+Number of outputs               $  8760
+Dt_out, Dt_start, Dt_end (min)  $    60     0    60 
+#
+Number of variables             $ 16
+#
+Variable                        $ REPRTDLANDUSE01
+Code                            $ 01
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 1 in AQMEII-4 Grid Cell mapped from Model Grid Cells (Water), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE02
+Code                            $ 02
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 2 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Developed/Urban), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE03
+Code                            $ 03
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 3 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Barren), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE04
+Code                            $ 04
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 4 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Evergreen Needleleaf Forest), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE05
+Code                            $ 05
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 5 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Deciduous Needleleaf Forest), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE06
+Code                            $ 06
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 6 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Evergreen Broadleaf Forest), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE07
+Code                            $ 07
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 7 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Deciduous Broadleaf Forest), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE08
+Code                            $ 08
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 8 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Mixed Forest), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE09
+Code                            $ 09
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 9 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Shrubland), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE10
+Code                            $ 10
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 10 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Herbaceous), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE11
+Code                            $ 11
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 11 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Planted/Cultivated), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE12
+Code                            $ 12
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 12 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Grassland), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE13
+Code                            $ 13
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 13 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Savanna), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE14
+Code                            $ 14
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 14 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Wetlands), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE15
+Code                            $ 15
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 15 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Tundra), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ REPRTDLANDUSE16
+Code                            $ 16
+Number of items                 $ 1
+Item                            $ 01, Fraction of AQMEII4 Land Type Category 16 in AQMEII-4 Grid Cell mapped from Model Grid Cells  (Snow and Ice), unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Comments follow                 $ N

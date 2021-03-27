@@ -1,0 +1,276 @@
+Enform version                  $ 20190101
+Enform type                     $ AQ
+Random key                      $ 7STC4GW
+Sequence number                 $ 0341
+Case number                     $ 472
+Creation date (UTC)             $ 202011161740
+Title                           $ AQMEII4 EU2009 GRID - Native Land Use Categories
+#
+Coordinates (LL or UTM)         $ LL
+Xmin (deg E or m)               $      -30.0000
+Ymin (deg E or m)               $       25.0000
+Nx                              $ 721
+Ny                              $ 361
+Dx (deg or m)                   $        0.1250
+Dy (deg or m)                   $        0.1250
+#
+First output (UTC)              $ 200901010100
+Time horizon of forecast (UTC)  $ 201001010000
+Number of outputs               $  8760
+Dt_out, Dt_start, Dt_end (min)  $    60     0    60 
+#
+Number of variables             $ 36
+#
+Variable                        $ NATIVELANDUSE01
+Code                            $ 01
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 1 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE02
+Code                            $ 02
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 2 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE03
+Code                            $ 03
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 3 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE04
+Code                            $ 04
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 4 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE05
+Code                            $ 05
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 5 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE06
+Code                            $ 06
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 6 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE07
+Code                            $ 07
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 7 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE08
+Code                            $ 08
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 8 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE09
+Code                            $ 09
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 9 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE10
+Code                            $ 10
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 10 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE11
+Code                            $ 11
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 11 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE12
+Code                            $ 12
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 12 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE13
+Code                            $ 13
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 13 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE14
+Code                            $ 14
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 14 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE15
+Code                            $ 15
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 15 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE16
+Code                            $ 16
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 16 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE17
+Code                            $ 17
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 17 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE18
+Code                            $ 18
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 18 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE19
+Code                            $ 19
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 19 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE20
+Code                            $ 20
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 20 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE21
+Code                            $ 21
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 21 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE22
+Code                            $ 22
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 22 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE23
+Code                            $ 23
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 23 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE24
+Code                            $ 24
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 24 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE25
+Code                            $ 25
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 25 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE26
+Code                            $ 26
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 26 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE27
+Code                            $ 27
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 27 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE28
+Code                            $ 28
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 28 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE29
+Code                            $ 29
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 29 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE30
+Code                            $ 30
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 30 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE31
+Code                            $ 31
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 31 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE32
+Code                            $ 32
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 32 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE33
+Code                            $ 33
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 33 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE34
+Code                            $ 34
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 34 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE35
+Code                            $ 35
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 35 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Variable                        $ NATIVELANDUSE36
+Code                            $ 36
+Number of items                 $ 1
+Item                            $ 01, Fraction of Native Land Use Category 36 in AQMEII-4 Grid Cell mapped from Model Grid Cells, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ N
+#
+Comments follow                 $ N

@@ -1,0 +1,312 @@
+Enform version                  $ 20190101
+Enform type                     $ AQ
+Random key                      $ T1DF6UL
+Sequence number                 $ 0251
+Case number                     $ 005
+Creation date (UTC)             $ 202011161743
+Title                           $ AQMEII4 NA2016 GRID - Meteorology
+#
+Coordinates (LL or UTM)         $ LL
+Xmin (deg E or m)               $     -130.0000
+Ymin (deg E or m)               $       23.5000
+Nx                              $ 565
+Ny                              $ 281
+Dx (deg or m)                   $        0.1250
+Dy (deg or m)                   $        0.1250
+#
+First output (UTC)              $ 201601010100
+Time horizon of forecast (UTC)  $ 201701010000
+Number of outputs               $  8784
+Dt_out, Dt_start, Dt_end (min)  $    60     0    60 
+#
+Number of variables             $ 32
+#
+Variable                        $ PRECIP
+Code                            $ 01
+Number of items                 $ 1
+Item                            $ 01, Sum of all Precipitation, cm, 0.01, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ PRESS
+Code                            $ 02
+Number of items                 $ 1
+Item                            $ 01, Pressure @ 0m, hPa, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ MIXRAT
+Code                            $ 03
+Number of items                 $ 1
+Item                            $ 01, Water vapour mixing ratio @ 2 m, g kg-1, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RH
+Code                            $ 04
+Number of items                 $ 1
+Item                            $ 01, Relative humidity @ 2 m, %, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ TD
+Code                            $ 05
+Number of items                 $ 1
+Item                            $ 01, Dew point temperature @ 2 m, K, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ TEMP
+Code                            $ 06
+Number of items                 $ 1
+Item                            $ 01, Temperature @ 2 m, K, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ WS
+Code                            $ 07
+Number of items                 $ 1
+Item                            $ 01, Horizontal Wind speed @ 10 m, m s-1, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ WD
+Code                            $ 08
+Number of items                 $ 1
+Item                            $ 01, Horizontal Wind direction @ 10 m, deg, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ W
+Code                            $ 09
+Number of items                 $ 1
+Item                            $ 01, Vertical Wind speed @ 10 m, m s-1, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ SWGU
+Code                            $ 10
+Number of items                 $ 1
+Item                            $ 01, Upward Shortwave Radiation at the Ground, W m-2, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ SWGD
+Code                            $ 11
+Number of items                 $ 1
+Item                            $ 01, Downward Shortwave Radiation at the Ground, W m-2, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ SWTU
+Code                            $ 12
+Number of items                 $ 1
+Item                            $ 01, Upward Shortwave Radiation at Atmosphere Top, W m-2, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ SWTD
+Code                            $ 13
+Number of items                 $ 1
+Item                            $ 01, Downward Shortwave Radiation at Atmosphere Top, W m-2, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ PBL
+Code                            $ 14
+Number of items                 $ 1
+Item                            $ 01, Planetary Boundary Layer Height, m, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ PAR
+Code                            $ 15
+Number of items                 $ 1
+Item                            $ 01, Photosynthetically Active Radiation, W m-2, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ AOD470
+Code                            $ 16
+Number of items                 $ 1
+Item                            $ 01, Aerosol optical depth at 470 nm, -, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ AOD555
+Code                            $ 17
+Number of items                 $ 1
+Item                            $ 01, Aerosol optical depth at 555 nm, -, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ AOD675
+Code                            $ 18
+Number of items                 $ 1
+Item                            $ 01, Aerosol optical depth at 675 nm, -, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ H2O
+Code                            $ 19
+Number of items                 $ 1
+Item                            $ 01, Water vapor column @ 0 m, cm3 cm-2, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ USTAR
+Code                            $ 20
+Number of items                 $ 1
+Item                            $ 01, Friction velocity, m s-1, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ MOL
+Code                            $ 21
+Number of items                 $ 1
+Item                            $ 01, Monin-obukhov length, m, 0.001, -999999
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RHO
+Code                            $ 22
+Number of items                 $ 1
+Item                            $ 01, Air density of lowest model layer, kg m-3, 0.01, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ TEMP10
+Code                            $ 23
+Number of items                 $ 1
+Item                            $ 01, Air temperature at 10 m, K, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ TSOIL
+Code                            $ 24
+Number of items                 $ 1
+Item                            $ 01, Uppermost soil layer temperature, K, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ SNOWC
+Code                            $ 25
+Number of items                 $ 1
+Item                            $ 01, Fractional coverage of snow in grid cell, 0-1, 0.01, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ WETCAN
+Code                            $ 26
+Number of items                 $ 1
+Item                            $ 01, Canopy wetness, 0.0 if dry and 1.0 if wet, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ SOILMOI
+Code                            $ 27
+Number of items                 $ 1
+Item                            $ 01, Near-surface soil moisture, m3/m3, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ Z0
+Code                            $ 28
+Number of items                 $ 1
+Item                            $ 01, Surface Roughness, m, 0.001, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ALB
+Code                            $ 29
+Number of items                 $ 1
+Item                            $ 01, Albedo, 0-1, 0.01, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ Z
+Code                            $ 30
+Number of items                 $ 1
+Item                            $ 01, Height above sea level, m, 0.1, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ FWET
+Code                            $ 31
+Number of items                 $ 1
+Item                            $ 01, Wet Surface, unitless fraction, 0.01, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ P, AVG
+#
+Variable                        $ LAI-T
+Code                            $ 32
+Number of items                 $ 1
+Item                            $ 01, Total Leaf Area Index, m2 m-2, 0.01, -9
+  Number of postprocessings     $ 3
+  Postprocessing statistics     $ N
+  Postprocessing statistics     $ M, AVG
+  Postprocessing statistics     $ P, AVG
+#
+Comments follow                 $ N

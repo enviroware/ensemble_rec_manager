@@ -1,0 +1,626 @@
+Enform version                  $ 20190101
+Enform type                     $ AQ
+Random key                      $ GFG336F
+Sequence number                 $ 0341
+Case number                     $ 452
+Creation date (UTC)             $ 202011161740
+Title                           $ AQMEII4 EU2009 GRID - Ammonia Bidirectional Flux Parameters
+#
+Coordinates (LL or UTM)         $ LL
+Xmin (deg E or m)               $      -30.0000
+Ymin (deg E or m)               $       25.0000
+Nx                              $ 721
+Ny                              $ 361
+Dx (deg or m)                   $        0.1250
+Dy (deg or m)                   $        0.1250
+#
+First output (UTC)              $ 200901010100
+Time horizon of forecast (UTC)  $ 201001010000
+Number of outputs               $  8760
+Dt_out, Dt_start, Dt_end (min)  $    60     0    60 
+#
+Number of variables             $ 86
+#
+Variable                        $ CONC-NH3-AIR
+Code                            $ 01
+Number of items                 $ 1
+Item                            $ 01, Air concentration of ammonia used for bi-directional flux calculations, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3
+Code                            $ 02
+Number of items                 $ 1
+Item                            $ 01, Net bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3
+Code                            $ 03
+Number of items                 $ 1
+Item                            $ 01, Net Aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET
+Code                            $ 04
+Number of items                 $ 1
+Item                            $ 01, Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO
+Code                            $ 05
+Number of items                 $ 1
+Item                            $ 01, Net Ammonia Compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND
+Code                            $ 06
+Number of items                 $ 1
+Item                            $ 01, Net Ammonia Compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-01
+Code                            $ 07
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 01  bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-01
+Code                            $ 08
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 01 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-01
+Code                            $ 09
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 01 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-01
+Code                            $ 10
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 01 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-01
+Code                            $ 11
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 01 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-02
+Code                            $ 12
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 02  bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-02
+Code                            $ 13
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 02 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-02
+Code                            $ 14
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 02 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-02
+Code                            $ 15
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 02 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-02
+Code                            $ 16
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 02 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-03
+Code                            $ 17
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 03  bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-03
+Code                            $ 18
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 03 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-03
+Code                            $ 19
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 03 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-03
+Code                            $ 20
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 03 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-03
+Code                            $ 21
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 03 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-04
+Code                            $ 22
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-04
+Code                            $ 23
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-04
+Code                            $ 24
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-04
+Code                            $ 25
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-04
+Code                            $ 26
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-05
+Code                            $ 27
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-05
+Code                            $ 28
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-05
+Code                            $ 29
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-05
+Code                            $ 30
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-05
+Code                            $ 31
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 05 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-06
+Code                            $ 32
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 06 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-06
+Code                            $ 33
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 06 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-06
+Code                            $ 34
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 06 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-06
+Code                            $ 35
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 06 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-06
+Code                            $ 36
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 06 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-07
+Code                            $ 37
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 07  bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-07
+Code                            $ 38
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 07 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-07
+Code                            $ 39
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 07 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-07
+Code                            $ 40
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 07 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-07
+Code                            $ 41
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 07 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-08
+Code                            $ 42
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-08
+Code                            $ 43
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-08
+Code                            $ 44
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-08
+Code                            $ 45
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-08
+Code                            $ 46
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-09
+Code                            $ 47
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-09
+Code                            $ 48
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-09
+Code                            $ 49
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-09
+Code                            $ 50
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-09
+Code                            $ 51
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 09 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-10
+Code                            $ 52
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 10 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-10
+Code                            $ 53
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 10 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-10
+Code                            $ 54
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 10 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-10
+Code                            $ 55
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 10 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-10
+Code                            $ 56
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 10 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-11
+Code                            $ 57
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-11
+Code                            $ 58
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-11
+Code                            $ 59
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-11
+Code                            $ 60
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-11
+Code                            $ 61
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-12
+Code                            $ 62
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 12 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-12
+Code                            $ 63
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 12 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-12
+Code                            $ 64
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 12 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-12
+Code                            $ 65
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 12 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-12
+Code                            $ 66
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 12 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-13
+Code                            $ 67
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 13 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-13
+Code                            $ 68
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 13 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-13
+Code                            $ 69
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 13 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-13
+Code                            $ 70
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 13 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-13
+Code                            $ 71
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 13 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-14
+Code                            $ 72
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 14 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-14
+Code                            $ 73
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 14 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-14
+Code                            $ 74
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 14 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-14
+Code                            $ 75
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 14 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-14
+Code                            $ 76
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 14 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-15
+Code                            $ 77
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 15 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-15
+Code                            $ 78
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 15 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-15
+Code                            $ 79
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 15 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-15
+Code                            $ 80
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 15 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-15
+Code                            $ 81
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 15 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SUM-NH3-16
+Code                            $ 82
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 bi-directional flux ammonia resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-AERO-NH3-16
+Code                            $ 83
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 aerodynamic resistance used for ammonia bi-directional fluxes, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-NET-16
+Code                            $ 84
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 Net Ammonia Compensation point concentration, pbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-STO-16
+Code                            $ 85
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 ammonia compensation point concentration with respect to stomata, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ COMP-NH3-GND-16
+Code                            $ 86
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Use Type 11 ammonia compensation point concentration with respect to ground, ppbv, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Comments follow                 $ N

@@ -1,0 +1,150 @@
+Enform version                  $ 20190101
+Enform type                     $ AQ
+Random key                      $ BL6FDHA
+Sequence number                 $ 0251
+Case number                     $ 072
+Creation date (UTC)             $ 202011161743
+Title                           $ AQMEII4 NA2016 GRID - HNO4 Net Gas Dry Deposition Parameters
+#
+Coordinates (LL or UTM)         $ LL
+Xmin (deg E or m)               $     -130.0000
+Ymin (deg E or m)               $       23.5000
+Nx                              $ 565
+Ny                              $ 281
+Dx (deg or m)                   $        0.1250
+Dy (deg or m)                   $        0.1250
+#
+First output (UTC)              $ 201601010100
+Time horizon of forecast (UTC)  $ 201701010000
+Number of outputs               $  8784
+Dt_out, Dt_start, Dt_end (min)  $    60     0    60 
+#
+Number of variables             $ 18
+#
+Variable                        $ VD-HNO4
+Code                            $ 01
+Number of items                 $ 1
+Item                            $ 01, Net Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-HNO4
+Code                            $ 02
+Number of items                 $ 1
+Item                            $ 01, Net Surface Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-HNO4
+Code                            $ 03
+Number of items                 $ 1
+Item                            $ 01, Net Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-HNO4
+Code                            $ 04
+Number of items                 $ 1
+Item                            $ 01, Net Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-HNO4
+Code                            $ 05
+Number of items                 $ 1
+Item                            $ 01, Net Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-HNO4
+Code                            $ 06
+Number of items                 $ 1
+Item                            $ 01, Net Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-HNO4
+Code                            $ 07
+Number of items                 $ 1
+Item                            $ 01, Net Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-HNO4
+Code                            $ 08
+Number of items                 $ 1
+Item                            $ 01, Net Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-HNO4
+Code                            $ 09
+Number of items                 $ 1
+Item                            $ 01, Net Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-HNO4
+Code                            $ 10
+Number of items                 $ 1
+Item                            $ 01, Net Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-HNO4
+Code                            $ 11
+Number of items                 $ 1
+Item                            $ 01, Net Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-HNO4
+Code                            $ 12
+Number of items                 $ 1
+Item                            $ 01, Net Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-HNO4
+Code                            $ 13
+Number of items                 $ 1
+Item                            $ 01, Net Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-HNO4
+Code                            $ 14
+Number of items                 $ 1
+Item                            $ 01, Net Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ DFLX-LCAN-HNO4
+Code                            $ 15
+Number of items                 $ 1
+Item                            $ 01, Net Flux via Lower Canopy Pathway, eq ha-1, 0.0001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ M, INT
+#
+Variable                        $ DFLX-ST-HNO4
+Code                            $ 16
+Number of items                 $ 1
+Item                            $ 01, Net Flux via Stomatal Pathway, eq ha-1, 0.0001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ M, INT
+#
+Variable                        $ DFLX-CUT-HNO4
+Code                            $ 17
+Number of items                 $ 1
+Item                            $ 01, Net Flux via Cuticle Pathway, eq ha-1, 0.0001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ M, INT
+#
+Variable                        $ DFLX-SOIL-HNO4
+Code                            $ 18
+Number of items                 $ 1
+Item                            $ 01, Net Flux via Soil Pathway, eq ha-1, 0.0001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ M, INT
+#
+Comments follow                 $ N

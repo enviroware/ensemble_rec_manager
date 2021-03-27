@@ -1,0 +1,612 @@
+Enform version                  $ 20190101
+Enform type                     $ AQ
+Random key                      $ BTWFDAH
+Sequence number                 $ 0241
+Case number                     $ 182
+Creation date (UTC)             $ 202011161742
+Title                           $ AQMEII4 NA2010 GRID - Land Use Type 03 Gas Dry Deposition Parameters for HNO4, N3O5, ONIT, O3, H2O2, HCHO
+#
+Coordinates (LL or UTM)         $ LL
+Xmin (deg E or m)               $     -130.0000
+Ymin (deg E or m)               $       23.5000
+Nx                              $ 565
+Ny                              $ 281
+Dx (deg or m)                   $        0.1250
+Dy (deg or m)                   $        0.1250
+#
+First output (UTC)              $ 201001010100
+Time horizon of forecast (UTC)  $ 201101010000
+Number of outputs               $  8760
+Dt_out, Dt_start, Dt_end (min)  $    60     0    60 
+#
+Number of variables             $ 84
+#
+Variable                        $ VD-HNO4-03
+Code                            $ 01
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-HNO4-03
+Code                            $ 02
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-HNO4-03
+Code                            $ 03
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-HNO4-03
+Code                            $ 04
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-HNO4-03
+Code                            $ 05
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-HNO4-03
+Code                            $ 06
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-HNO4-03
+Code                            $ 07
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-HNO4-03
+Code                            $ 08
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-HNO4-03
+Code                            $ 09
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-HNO4-03
+Code                            $ 10
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-HNO4-03
+Code                            $ 11
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-HNO4-03
+Code                            $ 12
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-HNO4-03
+Code                            $ 13
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-HNO4-03
+Code                            $ 14
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-N2O5-03
+Code                            $ 15
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-N2O5-03
+Code                            $ 16
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-N2O5-03
+Code                            $ 17
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-N2O5-03
+Code                            $ 18
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-N2O5-03
+Code                            $ 19
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-N2O5-03
+Code                            $ 20
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-N2O5-03
+Code                            $ 21
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-N2O5-03
+Code                            $ 22
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-N2O5-03
+Code                            $ 23
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-N2O5-03
+Code                            $ 24
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-N2O5-03
+Code                            $ 25
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-N2O5-03
+Code                            $ 26
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-N2O5-03
+Code                            $ 27
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-N2O5-03
+Code                            $ 28
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-ONIT-03
+Code                            $ 29
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-ONIT-03
+Code                            $ 30
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-ONIT-03
+Code                            $ 31
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-ONIT-03
+Code                            $ 32
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-ONIT-03
+Code                            $ 33
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-ONIT-03
+Code                            $ 34
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-ONIT-03
+Code                            $ 35
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-ONIT-03
+Code                            $ 36
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-ONIT-03
+Code                            $ 37
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-ONIT-03
+Code                            $ 38
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-ONIT-03
+Code                            $ 39
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-ONIT-03
+Code                            $ 40
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-ONIT-03
+Code                            $ 41
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-ONIT-03
+Code                            $ 42
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-O3-03
+Code                            $ 43
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-O3-03
+Code                            $ 44
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-O3-03
+Code                            $ 45
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-O3-03
+Code                            $ 46
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-O3-03
+Code                            $ 47
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-O3-03
+Code                            $ 48
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-O3-03
+Code                            $ 49
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-O3-03
+Code                            $ 50
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-O3-03
+Code                            $ 51
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-O3-03
+Code                            $ 52
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-O3-03
+Code                            $ 53
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-O3-03
+Code                            $ 54
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-O3-03
+Code                            $ 55
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-O3-03
+Code                            $ 56
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-H2O2-03
+Code                            $ 57
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-H2O2-03
+Code                            $ 58
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-H2O2-03
+Code                            $ 59
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-H2O2-03
+Code                            $ 60
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-H2O2-03
+Code                            $ 61
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-H2O2-03
+Code                            $ 62
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-H2O2-03
+Code                            $ 63
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-H2O2-03
+Code                            $ 64
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-H2O2-03
+Code                            $ 65
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-H2O2-03
+Code                            $ 66
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-H2O2-03
+Code                            $ 67
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-H2O2-03
+Code                            $ 68
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-H2O2-03
+Code                            $ 69
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-H2O2-03
+Code                            $ 70
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-HCHO-03
+Code                            $ 71
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-HCHO-03
+Code                            $ 72
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-HCHO-03
+Code                            $ 73
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-HCHO-03
+Code                            $ 74
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-HCHO-03
+Code                            $ 75
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-HCHO-03
+Code                            $ 76
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-HCHO-03
+Code                            $ 77
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-HCHO-03
+Code                            $ 78
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-HCHO-03
+Code                            $ 79
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-HCHO-03
+Code                            $ 80
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-HCHO-03
+Code                            $ 81
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-HCHO-03
+Code                            $ 82
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-HCHO-03
+Code                            $ 83
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-HCHO-03
+Code                            $ 84
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 03 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Comments follow                 $ N

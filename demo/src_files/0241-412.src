@@ -1,0 +1,612 @@
+Enform version                  $ 20190101
+Enform type                     $ AQ
+Random key                      $ XXGADP3
+Sequence number                 $ 0241
+Case number                     $ 412
+Creation date (UTC)             $ 202011161743
+Title                           $ AQMEII4 NA2010 GRID - Land Use Type 15 Gas Dry Deposition Parameters for SO2, NO2, NO, HNO3, NH3, PAN
+#
+Coordinates (LL or UTM)         $ LL
+Xmin (deg E or m)               $     -130.0000
+Ymin (deg E or m)               $       23.5000
+Nx                              $ 565
+Ny                              $ 281
+Dx (deg or m)                   $        0.1250
+Dy (deg or m)                   $        0.1250
+#
+First output (UTC)              $ 201001010100
+Time horizon of forecast (UTC)  $ 201101010000
+Number of outputs               $  8760
+Dt_out, Dt_start, Dt_end (min)  $    60     0    60 
+#
+Number of variables             $ 84
+#
+Variable                        $ VD-SO2-15
+Code                            $ 01
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-SO2-15
+Code                            $ 02
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-SO2-15
+Code                            $ 03
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-SO2-15
+Code                            $ 04
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-SO2-15
+Code                            $ 05
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-SO2-15
+Code                            $ 06
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-SO2-15
+Code                            $ 07
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-SO2-15
+Code                            $ 08
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-SO2-15
+Code                            $ 09
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-SO2-15
+Code                            $ 10
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-SO2-15
+Code                            $ 11
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-SO2-15
+Code                            $ 12
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-SO2-15
+Code                            $ 13
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-SO2-15
+Code                            $ 14
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-NO2-15
+Code                            $ 15
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-NO2-15
+Code                            $ 16
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-NO2-15
+Code                            $ 17
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-NO2-15
+Code                            $ 18
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-NO2-15
+Code                            $ 19
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-NO2-15
+Code                            $ 20
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-NO2-15
+Code                            $ 21
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-NO2-15
+Code                            $ 22
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-NO2-15
+Code                            $ 23
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-NO2-15
+Code                            $ 24
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-NO2-15
+Code                            $ 25
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-NO2-15
+Code                            $ 26
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-NO2-15
+Code                            $ 27
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-NO2-15
+Code                            $ 28
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-NO-15
+Code                            $ 29
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-NO-15
+Code                            $ 30
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-NO-15
+Code                            $ 31
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-NO-15
+Code                            $ 32
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-NO-15
+Code                            $ 33
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-NO-15
+Code                            $ 34
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-NO-15
+Code                            $ 35
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-NO-15
+Code                            $ 36
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-NO-15
+Code                            $ 37
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-NO-15
+Code                            $ 38
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-NO-15
+Code                            $ 39
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-NO-15
+Code                            $ 40
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-NO-15
+Code                            $ 41
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-NO-15
+Code                            $ 42
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-HNO3-15
+Code                            $ 43
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-HNO3-15
+Code                            $ 44
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-HNO3-15
+Code                            $ 45
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-HNO3-15
+Code                            $ 46
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-HNO3-15
+Code                            $ 47
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-HNO3-15
+Code                            $ 48
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-HNO3-15
+Code                            $ 49
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-HNO3-15
+Code                            $ 50
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-HNO3-15
+Code                            $ 51
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-HNO3-15
+Code                            $ 52
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-HNO3-15
+Code                            $ 53
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-HNO3-15
+Code                            $ 54
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-HNO3-15
+Code                            $ 55
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-HNO3-15
+Code                            $ 56
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-NH3-15
+Code                            $ 57
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-NH3-15
+Code                            $ 58
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-NH3-15
+Code                            $ 59
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-NH3-15
+Code                            $ 60
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-NH3-15
+Code                            $ 61
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-NH3-15
+Code                            $ 62
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-NH3-15
+Code                            $ 63
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-NH3-15
+Code                            $ 64
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-NH3-15
+Code                            $ 65
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-NH3-15
+Code                            $ 66
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-NH3-15
+Code                            $ 67
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-NH3-15
+Code                            $ 68
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-NH3-15
+Code                            $ 69
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-NH3-15
+Code                            $ 70
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ VD-PAN-15
+Code                            $ 71
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Deposition Velocity, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-SURF-PAN-15
+Code                            $ 72
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Canopy Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-STOM-PAN-15
+Code                            $ 73
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Stomatal Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-MESO-PAN-15
+Code                            $ 74
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Mesophyll Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CUT-PAN-15
+Code                            $ 75
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Cuticle Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-LCAN-PAN-15
+Code                            $ 76
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Lower Canopy Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-ST-PAN-15
+Code                            $ 77
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Stomatal Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-CUT-PAN-15
+Code                            $ 78
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Cuticular Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ ECOND-SOIL-PAN-15
+Code                            $ 79
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Effective Conductance for Soil Deposition, cm s-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLST-PAN-15
+Code                            $ 80
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Stomatal Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLCT-PAN-15
+Code                            $ 81
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Cuticle Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLSL-PAN-15
+Code                            $ 82
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Soil  Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-QLLC-PAN-15
+Code                            $ 83
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Quasi-Laminar Sublayer Resistance for Lower Canopy Pathway, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Variable                        $ RES-CONV-PAN-15
+Code                            $ 84
+Number of items                 $ 1
+Item                            $ 01, AQMEII4 Land Type 15 Within-Canopy Buoyant Convection Resistance, s cm-1, 0.001, -9
+  Number of postprocessings     $ 1
+  Postprocessing statistics     $ MD, PCT, 50
+#
+Comments follow                 $ N
