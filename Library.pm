@@ -18,7 +18,7 @@ our @EXPORT = qw(
 
 );
 our @EXPORT_OK = qw();
-my $VERSION = '20210306';
+my $VERSION = '20210407';
 
 use Data::Dumper;
 use Tie::File;
@@ -37,7 +37,6 @@ sub load_sq_json_file {
 
     my $sq_json_file = $args{File};
     my %sq_json = %{read_json_file(File=>$sq_json_file)};   
-    $sq_json{y_max} = $sq_json{y_min} + $sq_json{ny}*$sq_json{dy};
     return %sq_json;
 
 }
@@ -49,6 +48,7 @@ sub load_receptors {
     my %args = @_;
 
     my $file = $args{File};
+    my $hinfo = $args{Info};
 
     tie my @array, 'Tie::File', $file, mode => O_RDONLY;
     my @headers = anytrim (split(/\,/, $array[0]));
@@ -60,14 +60,29 @@ sub load_receptors {
     my $idx_lat = $index{LAT};
     my $idx_dutc = $index{DUTC};
 
+    my $x_min = $hinfo->{x_min};
+    my $y_min = $hinfo->{y_min};
+    my $x_max = $hinfo->{x_max};
+    my $y_max = $hinfo->{y_max};
+
     my %receptors;
 
     foreach my $ii (1..$#array) {
 
         my @parts = anytrim (split(/\,/, $array[$ii]));
-        $receptors{$parts[$idx_lcode]}{lon} = $parts[$idx_lon];
-        $receptors{$parts[$idx_lcode]}{lat} = $parts[$idx_lat];
-        $receptors{$parts[$idx_lcode]}{dutc} = $parts[$idx_dutc];
+
+        my $lcode = $parts[$idx_lcode];
+        my $lon = $parts[$idx_lon];
+        my $lat = $parts[$idx_lat];
+
+        if (($lon < $x_min) || ($lon > $x_max) || ($lat < $y_min) || ($lat > $y_max)) {
+            die "Please check coordinates of receptor $lcode (record $ii of pool file $file).\n".
+                " (($lon < $x_min) || ($lon > $x_max) || ($lat < $y_min) || ($lat > $y_max)) \n";
+        }
+
+        $receptors{$lcode}{lon} = $lon;
+        $receptors{$lcode}{lat} = $lat;
+        $receptors{$lcode}{dutc} = $parts[$idx_dutc];
 
     }
 
@@ -280,31 +295,17 @@ sub node {
 
     # This subroutine calculates the closest grid node coordinate
 
-    my $r_name = 'GeneralPurpose.pm (node)';
-    $r_name .= "***\n".join("\n",caller())."\n*** Error:";
-
     my %args = @_;
 
-
-    die $r_name." Value argument is mandatory." unless (exists($args{Value}));
-    my $grid_size = $args{GridSize} or die $r_name." GridSize argument is mandatory.";
-
     my $val = $args{Value};
+    my $grid_size = $args{GridSize};
 
     my $grid = $val / $grid_size;
     my $int_grid = POSIX::floor($grid);
-
-    my $diff;
-    $diff = $grid - $int_grid;
-
-    my $node;
-    if  ($diff < 0.5) {
-        $node = $int_grid * $grid_size;
-    } else {
-        $node = ($int_grid + 1) * $grid_size;
-    }
+    my $node = $int_grid * $grid_size;
 
     return $node;
+
 }
 
 #--------------------------------------------------------------------#

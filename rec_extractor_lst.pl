@@ -2,7 +2,7 @@ use strict;
 
 # Author: rbianconi@enviroware.com
 
-my $VERSION = '20210321';
+my $VERSION = '20210407';
 
 if ($^O eq 'MSWin32') {
     print "This code must be run under Linux or macOS\n";
@@ -43,14 +43,9 @@ my $hinput = $ret->{input};
 GetOptions(@input_list,'help'=>\$show_help_info);
 
 my $ret = check_input(Input=>$hinput,Logger=>$logger);
-my $hinfo = $ret->{info};
 $hinput = $ret->{input};
 
-$ret = set_info(Info=>$hinfo,Input=>$hinput,Logger=>$logger);
-$hinfo = $ret->{info};
-
 my %input = %{$hinput};
-my %info = %{$hinfo};
 
 my $sq = $input{sq};
 my $cs = $input{cs};
@@ -134,7 +129,7 @@ foreach my $mo (@models) {
 #       my @datetimes = generate_datetimes(Start=$sq_json{first_output_utc});
 
         # Load pool of receptors
-        my %receptors = load_receptors(File=>$input{pool_file});
+        my %receptors = load_receptors(File=>$input{pool_file},Info=>\%sq_json);
 
         my @ts = (1..$sq_json{nt});
 
