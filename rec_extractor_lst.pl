@@ -2,7 +2,9 @@ use strict;
 
 # Author: rbianconi@enviroware.com
 
-my $VERSION = '20210407';
+my $VERSION = '20210504';
+#my $VERSION = '20210416'; # Manage UTC data too (e.g. meteo)
+#my $VERSION = '20210407';
 
 if ($^O eq 'MSWin32') {
     print "This code must be run under Linux or macOS\n";
@@ -131,13 +133,14 @@ foreach my $mo (@models) {
         # Load pool of receptors
         my %receptors = load_receptors(File=>$input{pool_file},Info=>\%sq_json);
 
-        my @ts = (1..$sq_json{nt});
+        my $nt = $sq_json{nt};
+        my @ts = (1..$nt);
 
         # Loop on receptors
         foreach my $lcode (sort keys %receptors) {
             my @xs = (node(Value=>$receptors{$lcode}{lon},GridSize=>$sq_json{dx}));
             my @ys = (node(Value=>$receptors{$lcode}{lat},GridSize=>$sq_json{dy}));
-            my $dutc = $receptors{$lcode}{dutc};
+            my $dutc = $receptors{$lcode}{dutc} || 0;
             die "DUTC not integer ($dutc) for $lcode" if (floor($dutc) < $dutc);
 
             my $fdate_lst = sprintf "%.4d-%.2d-%.2d".'T'."%.2d:%.2d:00", @start_date[0..4];
@@ -150,19 +153,34 @@ foreach my $mo (@models) {
                             Domain => \%sq_json);
             my $out_file = "$out_folder/$lcode-$mo-$sq-$cs-$rl-$vr.csv";
             open(OUT,">$out_file") or die "$out_file:$!";
+
+            # Loop on indexes from 1 to nt
             foreach my $it_lst (@ts) {
 
                 # Apply time shift to time series
 
+                # Compute date array by adding to start date the increment in minutes
                 my @t_date_lst = Add_Delta_DHMS(@start_date,0,
                                               0,0,$it_lst*$sq_json{dt_out},0);
+
+                # Convert array to string, for output
                 my $tdate_lst = sprintf "%.4d-%.2d-%.2d".'T'."%.2d:%.2d:00", @t_date_lst[0..4];
 
-                my $idx_utc = $it_lst - $dutc + 1;
-                my $valp = ($idx_utc < 0 or $idx_utc > $#ts) ? $missing : $values[$idx_utc];
+                # Shift the loop index by $dutc.
+              
+                ## my $idx_utc = $it_lst - $dutc + 1;
+                my $idx_utc = $it_lst - $dutc;
+
+                # Test if the shifted loop index is positive and not larger than $nt
+                # If this is true, use it as a pointer to get the value in the time series,
+                # otherwise set it to missing.
+
+                ## my $valp = ($idx_utc < 0 or $idx_utc > $#ts) ? $missing : $values[$idx_utc];
+                my $valp = ($idx_utc < 1 or $idx_utc > $nt) ? $missing : $values[$idx_utc-1];
+
+                # Format value with precision
                 my $valpout = sprintf "%.${decimals}f", $valp;
                 print OUT "$valpout,$fdate_lst,$tdate_lst\n";
-                print "$valpout,$fdate_lst,$tdate_lst\n";
 
                 $fdate_lst = $tdate_lst;
             }
