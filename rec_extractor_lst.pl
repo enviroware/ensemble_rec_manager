@@ -2,7 +2,7 @@ use strict;
 
 # Author: rbianconi@enviroware.com
 
-my $VERSION = '20210504';
+my $VERSION = '20210518'; # Fix to T indexing, manage dates in filenames
 #my $VERSION = '20210416'; # Manage UTC data too (e.g. meteo)
 #my $VERSION = '20210407';
 
@@ -65,11 +65,56 @@ my $src_file = "$input{home_dir}{src}/$sq-$cs.src";
 my @models = @{$input{models}};
 foreach my $mo (@models) {
 
+    my ($base,$vbase,$bz2_file,$ens_file,$dat_file,$out_folder,$dat_log_file);
+    my $is_datetime_correct = 0;
+
+    # Test for correct datetime used in file name (first output datetime)
     my $base = "$mo-$sq-$cs-$rl-$vr-$date";
     my $vbase = "v$vr-$mo-$sq-$cs-$rl-$date";
     my $bz2_file = "$input{home_dir}{bz2}/$mo/$sq/$cs/$base.ens.bz2";
+    if ($input{go}{bunzip2}) {
+        # Check date in in bz2 file
+        if (-e $bz2_file) {
+            $is_datetime_correct = 1;
+        } else {
+            my $other_date = $date;
+            my $z = substr($other_date,8,2,'00');
+            $base = "$mo-$sq-$cs-$rl-$vr-$other_date";
+            $vbase = "v$vr-$mo-$sq-$cs-$rl-$other_date";
+            my $bz2_file_other = "$input{home_dir}{bz2}/$mo/$sq/$cs/$base.ens.bz2";
+            if (-e $bz2_file_other) {
+                $is_datetime_correct = 0;
+            } else {
+                die "Please check if $bz2_file or $bz2_file_other exists";
+            }
+            $bz2_file = $bz2_file_other;
+        }
+    }
+
     my $ens_file = "$input{home_dir}{ens}/s$sq/c$cs/$base.ens";
     my $dat_file = "$input{home_dir}{dat}/s$sq/c$cs/r$rl/v$vr/$vbase.dat";
+
+    # check ens_file and dat_file if check was not made on bz2_file (in such
+    # case we have already corrected the date, if necessary).
+    unless ($input{go}{bunzip2}) {
+        if (-e $ens_file) {
+            $is_datetime_correct = 1;
+        } else {
+            my $other_date = $date;
+            my $z = substr($other_date,8,2,'00');
+            $base = "$mo-$sq-$cs-$rl-$vr-$other_date";
+            $vbase = "v$vr-$mo-$sq-$cs-$rl-$other_date";
+            my $ens_file_other = "$input{home_dir}{ens}/s$sq/c$cs/$base.ens";
+            if (-e $ens_file_other) {
+                $is_datetime_correct = 0;
+            } else {
+                die "Please check if $ens_file or $ens_file_other exists";
+            }
+            $ens_file = $ens_file_other;
+
+        }
+    }
+
     my $out_folder = "$input{home_dir}{out}/$sq/$cs/$rl/$vr/$mo";
     my $dat_log_file = "$input{home_dir}{dat}/s$sq/c$cs/$base.log";
 

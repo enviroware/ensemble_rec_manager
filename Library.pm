@@ -18,7 +18,8 @@ our @EXPORT = qw(
 
 );
 our @EXPORT_OK = qw();
-my $VERSION = '20210407';
+my $VERSION = '20210407'; # CHO fix to _variable_node_index
+#my $VERSION = '20210407';
 
 use Data::Dumper;
 use Tie::File;
@@ -155,6 +156,7 @@ sub extract_values_from_grid {
     my @xs = @{$args{Xs}};
     my @ys = @{$args{Ys}};
     my @ts = @{$args{Ts}};
+    die "Ts must be positive" unless ($ts[0] > 0);
     my %domain = %{$args{Domain}};
 
     my $datasize = 14;  # ENSEMBLE AQ (V5)
@@ -346,8 +348,10 @@ sub _variable_node_index {
     #my $nx = ($xmax - $xmin) / $dx + 1;
     #my $pos = (($ymax - $y) / $dy) * $nx + (($x - $xmin) / $dx) + t * $ny * (14*$nx +1) * ;
 
+    # t is a positive index
+
     my $nmat = $args{BytesLine} * $args{NyDomain};
-    my $nbefore = ($nmat + 13) * $args{T};
+    my $nbefore = ($nmat + 13) * ($args{T} - 1);
 
     $pos = POSIX::floor ( 0.5 +
                    POSIX::floor( 0.5 + (($args{YmaxDomain} - $args{Y}) / $args{DyDomain}) ) * ( $args{NxDomain} * 14 + 1)
