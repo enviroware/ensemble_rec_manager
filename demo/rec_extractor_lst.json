@@ -11,17 +11,18 @@
       "01": {},
       "02": {
         "time_mask": "./time_masks/mask.2016.daily.csv",
-        "period": "D",
         "operator": "AVG"
       },
       "03": {
         "time_mask": "./time_masks/mask.2016.monthly.csv",
-        "period": "M",
         "operator": "AVG"
       },
       "04": {
         "time_mask": "./time_masks/mask.2016.period.csv",
-        "period": "P",
+        "operator": "AVG"
+      },
+      "05": {
+        "time_mask": "./time_masks/mask.2016.hourly.csv",
         "operator": "AVG"
       }
     },
