@@ -7,6 +7,24 @@
     "models": [
         10701
     ],
+    "statistics": {
+      "01": {},
+      "02": {
+        "time_mask": "./time_masks/mask.2016.daily.csv",
+        "period": "D",
+        "operator": "AVG"
+      },
+      "03": {
+        "time_mask": "./time_masks/mask.2016.monthly.csv",
+        "period": "M",
+        "operator": "AVG"
+      },
+      "04": {
+        "time_mask": "./time_masks/mask.2016.period.csv",
+        "period": "P",
+        "operator": "AVG"
+      }
+    },
     "pool_file": "pool_files/na2016_pm10.csv",
     "create_dirs": 1,
     "vrmax": 4,
