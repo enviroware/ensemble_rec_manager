@@ -55,7 +55,7 @@ sub load_statistics {
 
     my %statistics;
 
-    my @ids = keys %statistics_in;
+    my @ids = sort keys %statistics_in;
 
     foreach my $id (@ids) {
 
@@ -63,7 +63,6 @@ sub load_statistics {
         next if ($id eq '01');
 
         $statistics{$id}{time_mask} = $statistics_in{$id}{time_mask};
-        $statistics{$id}{period} = $statistics_in{$id}{period};
         $statistics{$id}{operator} = $statistics_in{$id}{operator};
 
         # Read time_mask file
@@ -81,17 +80,15 @@ sub load_statistics {
             my @from_in = unpack("a4a2a2a2",$from);
             my @to_in = unpack("a4a2a2a2",$to);
 
-            # Distance in hours
+            # Hours in interval after first one (ie 23 for a full day of 24)
             my ($Dd,$Dh,$Dm,$Ds) =
                 Delta_DHMS(@from_in,0,0, @to_in,0,0);
             my $nh = $Dd * 24 + $Dh;
 
-            # Hours within the interval
-            my $datetime = $from;
-
-            # Assign each hour within a time window to the 
-            # corresponding averaging period (there can be holes)
-            # For example only week 12 and week 33 of the year
+            # Assign each hour within interval to the 
+            # corresponding averaging period.
+            # There can be holes:
+            # for example only week 12 and week 33 of the year
                          
             $statistics{$id}{time_mask_from}{$from} = $from;
             $statistics{$id}{time_mask_to}{$from} = $to;

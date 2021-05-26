@@ -220,8 +220,7 @@ foreach my $mo (@models) {
 
                 # Create a datetime string for statistics hashes
                 my $tdate_mask_lst = sprintf "%.4d%.2d%.2d%.2d", @t_date_lst[0..4];
-                # Create a datetime string for statistics hashes
-                my $tdate_mask_lst = sprintf "%.4d%.2d%.2d%.2d", @t_date_lst[0..4];
+
                 # Shift the loop index by $dutc.
               
                 ## my $idx_utc = $it_lst - $dutc + 1;
@@ -240,6 +239,7 @@ foreach my $mo (@models) {
 
                 # Store values for statistics
                 foreach my $id_statistics (keys %statistics) {
+                    die "Cannot compute statistics unless vr=01 in input\n" if ($vr ne '01');
                     if (exists($statistics{$id_statistics}{time_mask_to}{$tdate_mask_lst})) {
                         # This allows to compute a statistics in a subperiod of data
                         # by defining the proper intervals in the time mask.
@@ -266,10 +266,11 @@ foreach my $mo (@models) {
                 # Process arrays of model values stored for current statistics
                 my %arrays = %{$varrays{$id_statistics}};
                 my @to_datetimes = sort keys %arrays;
+
                 foreach my $to (@to_datetimes) {
                     my @array = @{$arrays{$to}};
                     my $val;
-                    my $from = $statistics{$id_statistics}{time_mask_from}{$to};
+                    my $from = $statistics{$id_statistics}{time_mask_from}{$to} || die Dumper \@to_datetimes,$id_statistics;
                     $val = compute_statistics(Operator=>$stat,Values=>\@array,Missing=>$missing);
                     my $valout = sprintf "%.5f", $val;
                     print CSV "$valout,$from,$to\n";
