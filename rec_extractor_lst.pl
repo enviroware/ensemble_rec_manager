@@ -2,7 +2,8 @@ use strict;
 
 # Author: rbianconi@enviroware.com
 
-my $VERSION = '20210518'; # Fix to T indexing, manage dates in filenames
+my $VERSION = '20210526'; #  Added calculation of statistics
+#my $VERSION = '20210518'; # Fix to T indexing, manage dates in filenames
 #my $VERSION = '20210416'; # Manage UTC data too (e.g. meteo)
 #my $VERSION = '20210407';
 
@@ -16,10 +17,12 @@ use lib $FindBin::Bin;
 use Library qw(
     init_input
     check_input
+    compute_statistics
     extract_values_from_grid
     set_info
     load_sq_json_file
     load_receptors
+    load_statistics
     node
 );
 use Getopt::Long;
@@ -60,6 +63,9 @@ my $date = $sq_json{cases}{"c$cs"}{first_output};
 my @start_date = unpack("a4a2a2a2a2",$sq_json{cases}{"c$cs"}{start});
 my $missing = $sq_json{cases}{"c$cs"}{releases}{"r$rl"}{variables}{"v$vr"}{missing_value};
 my $src_file = "$input{home_dir}{src}/$sq-$cs.src";
+
+# Load statistics
+my %statistics = load_statistics(Input=>$hinput);
 
 # Loop on models
 my @models = @{$input{models}};
@@ -199,6 +205,7 @@ foreach my $mo (@models) {
             my $out_file = "$out_folder/$lcode-$mo-$sq-$cs-$rl-$vr.csv";
             open(OUT,">$out_file") or die "$out_file:$!";
 
+            my %varrays;
             # Loop on indexes from 1 to nt
             foreach my $it_lst (@ts) {
 
@@ -211,6 +218,10 @@ foreach my $mo (@models) {
                 # Convert array to string, for output
                 my $tdate_lst = sprintf "%.4d-%.2d-%.2d".'T'."%.2d:%.2d:00", @t_date_lst[0..4];
 
+                # Create a datetime string for statistics hashes
+                my $tdate_mask_lst = sprintf "%.4d%.2d%.2d%.2d", @t_date_lst[0..4];
+                # Create a datetime string for statistics hashes
+                my $tdate_mask_lst = sprintf "%.4d%.2d%.2d%.2d", @t_date_lst[0..4];
                 # Shift the loop index by $dutc.
               
                 ## my $idx_utc = $it_lst - $dutc + 1;
@@ -227,18 +238,46 @@ foreach my $mo (@models) {
                 my $valpout = sprintf "%.${decimals}f", $valp;
                 print OUT "$valpout,$fdate_lst,$tdate_lst\n";
 
+                # Store values for statistics
+                foreach my $id_statistics (keys %statistics) {
+                    if (exists($statistics{$id_statistics}{time_mask_to}{$tdate_mask_lst})) {
+                        # This allows to compute a statistics in a subperiod of data
+                        # by defining the proper intervals in the time mask.
+                        # For example, only extract AOT in summer
+                        my $mask_to = $statistics{$id_statistics}{time_mask_to}{$tdate_mask_lst};
+                        push @{$varrays{$id_statistics}{$mask_to}},$valpout;
+                    }
+                }
+
                 $fdate_lst = $tdate_lst;
             }
 
             # Save time series 
             close (OUT);
 
+            # Apply statistics
+            foreach my $id_statistics (keys %statistics) {
+                my $stat = $statistics{$id_statistics}{operator};
+                next unless ($stat); # This will skip 01 that is an empty hash
+                my $out_folder = "$input{home_dir}{out}/$sq/$cs/$rl/$id_statistics/$mo";
+                mkpath $out_folder unless (-e $out_folder);
+                my $out_file = "$out_folder/$lcode-$mo-$sq-$cs-$rl-$id_statistics.csv";
+                open(CSV,">$out_file") or die "$out_file: $!";
+                # Process arrays of model values stored for current statistics
+                my %arrays = %{$varrays{$id_statistics}};
+                my @to_datetimes = sort keys %arrays;
+                foreach my $to (@to_datetimes) {
+                    my @array = @{$arrays{$to}};
+                    my $val;
+                    my $from = $statistics{$id_statistics}{time_mask_from}{$to};
+                    $val = compute_statistics(Operator=>$stat,Values=>\@array,Missing=>$missing);
+                    my $valout = sprintf "%.5f", $val;
+                    print CSV "$valout,$from,$to\n";
+                }
+                close(CSV);
+            }
         }
 
-
-# Apply optional time averaging and save time series
-
-# Delete dat grid file (optional)
     }
 }
 

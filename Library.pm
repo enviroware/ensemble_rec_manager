@@ -9,17 +9,19 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(
     anytrim
     check_input
+    compute_statistics
     extract_values_from_grid
     init_input
     load_sq_json_file
     load_receptors
+    load_statistics
     node
     set_info
 
 );
 our @EXPORT_OK = qw();
-my $VERSION = '20210407'; # CHO fix to _variable_node_index
-#my $VERSION = '20210407';
+my $VERSION = '20210526'; # Added statistics
+#my $VERSION = '20210407'; # CHO fix to _variable_node_index
 
 use Data::Dumper;
 use Tie::File;
@@ -39,6 +41,72 @@ sub load_sq_json_file {
     my $sq_json_file = $args{File};
     my %sq_json = %{read_json_file(File=>$sq_json_file)};   
     return %sq_json;
+
+}
+
+#-----------------------------------------------------------------------------#
+
+sub load_statistics {
+
+    my %args = @_;
+    my $hinput = $args{Input};
+
+    my %statistics_in = %{$hinput->{statistics}};
+
+    my %statistics;
+
+    my @ids = keys %statistics_in;
+
+    foreach my $id (@ids) {
+
+        # Skip var=01 because they are hourly values
+        next if ($id eq '01');
+
+        $statistics{$id}{time_mask} = $statistics_in{$id}{time_mask};
+        $statistics{$id}{period} = $statistics_in{$id}{period};
+        $statistics{$id}{operator} = $statistics_in{$id}{operator};
+
+        # Read time_mask file
+        my $mask_file = $statistics_in{$id}{time_mask};
+        open(MSK,"<$mask_file") or die "$mask_file: $!";
+        my @lines = <MSK>;
+        close(MSK);
+
+        # Loop from first datetime_from to last datetime_to
+        # in time_mask file
+        while (@lines) {
+            my $line = shift @lines;
+            chomp $line;
+            my ($from,$to) = split(",",$line);
+            my @from_in = unpack("a4a2a2a2",$from);
+            my @to_in = unpack("a4a2a2a2",$to);
+
+            # Distance in hours
+            my ($Dd,$Dh,$Dm,$Ds) =
+                Delta_DHMS(@from_in,0,0, @to_in,0,0);
+            my $nh = $Dd * 24 + $Dh;
+
+            # Hours within the interval
+            my $datetime = $from;
+
+            # Assign each hour within a time window to the 
+            # corresponding averaging period (there can be holes)
+            # For example only week 12 and week 33 of the year
+                         
+            $statistics{$id}{time_mask_from}{$from} = $from;
+            $statistics{$id}{time_mask_to}{$from} = $to;
+
+            for my $ih (1..$nh) {
+                my ($Dy,$Dmo,$Dd,$Dh,$Dm,$Ds) =
+                    Add_Delta_YMDHMS(@from_in,0,0, 0,0,0,$ih,0,0);
+                my $dt = sprintf "%.4d%.2d%.2d%.2d", $Dy,$Dmo,$Dd,$Dh;
+                $statistics{$id}{time_mask_from}{$dt} = $from; 
+                $statistics{$id}{time_mask_to}{$dt} = $to; 
+            }
+        }
+    }
+
+    return %statistics;
 
 }
 
@@ -143,6 +211,32 @@ sub check_input {
     };
 
     return $ret;
+
+}
+
+#------------------------------------------------------------------------------#
+
+sub compute_statistics {
+
+    my %args = @_;
+
+    my $operator = $args{Operator};
+    my @values = @{$args{Values}};
+    my $missing = $args{Missing};
+    my $result;
+    if (uc($operator) eq 'AVG') {
+
+        my $tot = 0;
+        my $count = 0;
+        foreach my $vv (@values) {
+            unless  ($vv == $missing) {
+                $tot = $tot + $vv;
+                $count++;
+            }
+        }
+        $result = ($count > 0) ? $tot/$count : $missing;
+    }
+    return $result;
 
 }
 
