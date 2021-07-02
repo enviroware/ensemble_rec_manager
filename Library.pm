@@ -11,6 +11,7 @@ our @EXPORT = qw(
     check_input
     compute_statistics
     extract_values_from_grid
+    get_files
     init_input
     load_sq_json_file
     load_receptors
@@ -20,12 +21,14 @@ our @EXPORT = qw(
 
 );
 our @EXPORT_OK = qw();
-my $VERSION = '20210526'; # Added statistics
+my $VERSION = '20210622'; # Added time_masks at lcode level
+#my $VERSION = '20210526'; # Added statistics
 #my $VERSION = '20210407'; # CHO fix to _variable_node_index
 
 use Data::Dumper;
 use Tie::File;
 use FileHandle;
+use File::Basename;
 use JSON;
 use Date::Calc qw (Delta_DHMS Add_Delta_DHMS Delta_YMDHMS Add_Delta_YMDHMS);
 use File::Path;
@@ -54,7 +57,7 @@ sub load_statistics {
     my %statistics_in = %{$hinput->{statistics}};
 
     my %statistics;
-
+    my @keys = qw(time_mask_from time_mask_to);
     my @ids = sort keys %statistics_in;
 
     foreach my $id (@ids) {
@@ -62,48 +65,83 @@ sub load_statistics {
         # Skip var=01 because they are hourly values
         next if ($id eq '01');
 
-        $statistics{$id}{time_mask} = $statistics_in{$id}{time_mask};
         $statistics{$id}{operator} = $statistics_in{$id}{operator};
 
-        # Read time_mask file
-        my $mask_file = $statistics_in{$id}{time_mask};
-        open(MSK,"<$mask_file") or die "$mask_file: $!";
-        my @lines = <MSK>;
-        close(MSK);
+        if (exists($statistics_in{$id}{time_mask})) {
+            $statistics{$id}{time_mask} = $statistics_in{$id}{time_mask};
+            # Read time_mask file
+            my $mask_file = $statistics_in{$id}{time_mask};
+            open(MSK,"<$mask_file") or die "$mask_file: $!";
+            my @lines = <MSK>;
+            close(MSK);
+            my %stat = parse_time_mask(Lines=>\@lines);
+            map { $statistics{$id}{any}{$_} = $stat{$_} } (@keys);
+        } elsif (exists($statistics_in{$id}{time_masks_dir})) {
+            # Read time_mask files (one for each station in pool file
+            my @mask_files = get_files(Dir=>$statistics_in{$id}{time_masks_dir},Filter=>'\.tm');
+            foreach my $mask_file (@mask_files) {
+                my ($name,$path,$suffix) = fileparse($mask_file,'.tm');
+                my $info_file = "$statistics_in{$id}{time_masks_dir}/$name.info";
+                open(INFO,"<$info_file") or die "$info_file: $!";
+                my @ilines = <INFO>;
+                close(INFO);
+                my @fields = split(",",$ilines[0]);
+                my $lcode = $ilines[0];
+                my $mfile = "$statistics_in{$id}{time_masks_dir}/$name.tm";
+                open(MSK,"<$mfile") or die "$mfile: $!";
+                my @lines = <MSK>;
+                close(MSK);
 
-        # Loop from first datetime_from to last datetime_to
-        # in time_mask file
-        while (@lines) {
-            my $line = shift @lines;
-            chomp $line;
-            my ($from,$to) = split(",",$line);
-            my @from_in = unpack("a4a2a2a2",$from);
-            my @to_in = unpack("a4a2a2a2",$to);
-
-            # Hours in interval after first one (ie 23 for a full day of 24)
-            my ($Dd,$Dh,$Dm,$Ds) =
-                Delta_DHMS(@from_in,0,0, @to_in,0,0);
-            my $nh = $Dd * 24 + $Dh;
-
-            # Assign each hour within interval to the 
-            # corresponding averaging period.
-            # There can be holes:
-            # for example only week 12 and week 33 of the year
-                         
-            $statistics{$id}{time_mask_from}{$from} = $from;
-            $statistics{$id}{time_mask_to}{$from} = $to;
-
-            for my $ih (1..$nh) {
-                my ($Dy,$Dmo,$Dd,$Dh,$Dm,$Ds) =
-                    Add_Delta_YMDHMS(@from_in,0,0, 0,0,0,$ih,0,0);
-                my $dt = sprintf "%.4d%.2d%.2d%.2d", $Dy,$Dmo,$Dd,$Dh;
-                $statistics{$id}{time_mask_from}{$dt} = $from; 
-                $statistics{$id}{time_mask_to}{$dt} = $to; 
+                my %stat = parse_time_mask(Lines=>\@lines);
+                map { $statistics{$id}{each}{$lcode}{$_} = $stat{$_} } (@keys);
             }
+        }else {
+            die "Please specify either time_masks_dir or time_mask for $id";
+        }
+    }
+}
+
+#-----------------------------------------------------------------------------#
+
+sub parse_time_mask {
+
+    my %args = @_;
+
+    my @lines = @{$args{Lines}};
+
+    my %stat;
+
+    # Loop from first datetime_from to last datetime_to
+    # in time_mask file
+    while (@lines) {
+        my $line = shift @lines;
+        chomp $line;
+        my ($from,$to) = split(",",$line);
+        my @from_in = unpack("a4a2a2a2",$from);
+        my @to_in = unpack("a4a2a2a2",$to);
+        # Hours in interval after first one (ie 23 for a full day of 24)
+        my ($Dd,$Dh,$Dm,$Ds) =
+            Delta_DHMS(@from_in,0,0, @to_in,0,0);
+        my $nh = $Dd * 24 + $Dh;
+
+        # Assign each hour within interval to the 
+        # corresponding averaging period.
+        # There can be holes:
+        # for example only week 12 and week 33 of the year
+                     
+        $stat{time_mask_from}{$from} = $from;
+        $stat{time_mask_to}{$from} = $to;
+
+        for my $ih (1..$nh) {
+            my ($Dy,$Dmo,$Dd,$Dh,$Dm,$Ds) =
+                Add_Delta_YMDHMS(@from_in,0,0, 0,0,0,$ih,0,0);
+            my $dt = sprintf "%.4d%.2d%.2d%.2d", $Dy,$Dmo,$Dd,$Dh;
+            $stat{time_mask_from}{$dt} = $from; 
+            $stat{time_mask_to}{$dt} = $to; 
         }
     }
 
-    return %statistics;
+    return %stat;
 
 }
 
@@ -455,6 +493,35 @@ sub _variable_node_index {
     $starting_byte = $nbefore + 13 + $pos;
 
     return $starting_byte;
+
+}
+
+#------------------------------------------------------
+sub get_files {
+
+    my %args = @_;
+    # These are mandatory inputs
+    die " GeneralPurpose.pm (get_files) - Dir is mandatory".Dumper caller() unless ($args{Dir});
+    
+    my $dir = $args{Dir};
+    my $filter = $args{Filter} || '';
+
+    opendir(DIR, $dir) or die "$dir: $!";
+    my @list = grep { $_ ne "." and $_  ne ".." } readdir(DIR);
+    closedir(DIR);
+  
+    if ($filter) {
+        @list = grep /$filter/, @list;
+    }
+
+    if (exists($args{IncludePath})) {
+        my @new_list = ();
+        foreach my $item (@list) {        
+            push @new_list, $dir.$item;
+        }
+        @list = @new_list;
+    }
+    return @list;
 
 }
 
