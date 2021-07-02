@@ -2,7 +2,8 @@ use strict;
 
 # Author: rbianconi@enviroware.com
 
-my $VERSION = '20210615';  # LST conversion of UTC is optional - set extract_utc = 0/1 in json input
+my $VERSION = '20210622';  # Now using .tm and .info files
+#my $VERSION = '20210615';  # LST conversion of UTC is optional - set extract_utc = 0/1 in json input
 #my $VERSION = '20210526'; # Added calculation of statistics
 #my $VERSION = '20210518'; # Fix to T indexing, manage dates in filenames
 #my $VERSION = '20210416'; # Manage UTC data too (e.g. meteo)
@@ -244,11 +245,14 @@ foreach my $mo (@models) {
                 # Store values for statistics
                 foreach my $id_statistics (keys %statistics) {
                     die "Cannot compute statistics unless vr=01 in input\n" if ($vr ne '01');
-                    if (exists($statistics{$id_statistics}{time_mask_to}{$tdate_mask_lst})) {
-                        # This allows to compute a statistics in a subperiod of data
-                        # by defining the proper intervals in the time mask.
-                        # For example, only extract AOT in summer
-                        my $mask_to = $statistics{$id_statistics}{time_mask_to}{$tdate_mask_lst};
+                    # This allows to compute a statistics in a subperiod of data
+                    # by defining the proper intervals in the time mask.
+                    # For example, only extract AOT in summer
+                    if (exists($statistics{$id_statistics}{any}{time_mask_to}{$tdate_mask_lst})) {
+                        my $mask_to = $statistics{$id_statistics}{any}{time_mask_to}{$tdate_mask_lst};
+                        push @{$varrays{$id_statistics}{$mask_to}},$valpout;
+                    } elsif (exists($statistics{$id_statistics}{each}{$lcode}{time_mask_to}{$tdate_mask_lst})) {
+                        my $mask_to = $statistics{$id_statistics}{each}{$lcode}{time_mask_to}{$tdate_mask_lst};
                         push @{$varrays{$id_statistics}{$mask_to}},$valpout;
                     }
                 }
