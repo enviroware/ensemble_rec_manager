@@ -4,13 +4,14 @@
     "cs": "001",
     "rl": "67",
     "vr": "01",
+    "extract_utc": 0,
     "models": [
         10701
     ],
     "statistics": {
       "01": {},
       "02": {
-        "time_mask": "./time_masks/mask.2016.daily.csv",
+        "time_masks_dir": "../../aqmeii4_generated_data/NA2016/GAS_AEROSOL/PM10/D",
         "operator": "AVG"
       },
       "03": {
