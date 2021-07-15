@@ -11,7 +11,7 @@
     "statistics": {
       "01": {},
       "02": {
-        "time_masks_dir": "../../aqmeii4_generated_data/NA2016/GAS_AEROSOL/PM10/D",
+        "time_masks_dir": "../../aqmeii4_generated_data/NA2016_SINGLE/GAS_AEROSOL/PM10/D",
         "operator": "AVG"
       },
       "03": {
