@@ -1,4 +1,4 @@
-RBI 20210701
+RBI 20210715
 
 Install required Perl modules if not available yet from CPAN or with package
 manager (apt on Ubuntu yum on Centos, for example)
@@ -80,6 +80,10 @@ LNAME,LAT,LON,DUTC
 AIRSUSAZ1APJ,33.42119,-111.50322,-7.0
 AIRSUSAZDPHO,33.48385,-112.14257,-7.
 
+When the time mask (see below) is specified for each station by using the input keyword time_masks_dir, 
+only site names in the pool file that match the site name in one of the files within the time_masks_dir
+will be processed.
+
 ** time_mask
 
 This is an ASCII file with one or more arbitrary intervals that specify the
@@ -112,6 +116,12 @@ AIRSUSAZ1APJ,APACHE JUNCTION FIRE STATION,AIRS,33.42119,-111.50322,550,US,AZ,Sub
 
 The program will read the .info files in the folder and will use the
 time_mask specific to each site, based on LCODE
+
+** operator
+This is the operator applied to the extracted model data. Currently implemented:
+AVG --> average of model values within time window 
+INT --> sum of model values within time window 
+
 
 ** extract_utc
 If"extract_utc: 1" the time shift from UTC to LST won't be made.

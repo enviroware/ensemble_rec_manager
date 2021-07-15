@@ -254,6 +254,8 @@ foreach my $mo (@models) {
                     } elsif (exists($statistics{$id_statistics}{each}{$lcode}{time_mask_to}{$tdate_mask_lst})) {
                         my $mask_to = $statistics{$id_statistics}{each}{$lcode}{time_mask_to}{$tdate_mask_lst};
                         push @{$varrays{$id_statistics}{$mask_to}},$valpout;
+                    } else {
+                        next;
                     }
                 }
 
@@ -265,7 +267,11 @@ foreach my $mo (@models) {
 
             # Apply statistics
             foreach my $id_statistics (keys %statistics) {
+
+                next unless (exists $varrays{$id_statistics});
+
                 my $stat = $statistics{$id_statistics}{operator};
+
                 next unless ($stat); # This will skip 01 that is an empty hash
                 my $out_folder = "$input{home_dir}{out}/$sq/$cs/$rl/$id_statistics/$mo";
                 mkpath $out_folder unless (-e $out_folder);
@@ -278,7 +284,10 @@ foreach my $mo (@models) {
                 foreach my $to (@to_datetimes) {
                     my @array = @{$arrays{$to}};
                     my $val;
-                    my $from = $statistics{$id_statistics}{time_mask_from}{$to} || die Dumper \@to_datetimes,$id_statistics;
+
+                    my $from = ($statistics{$id_statistics}{is_any}) ?
+                       $statistics{$id_statistics}{any}{time_mask_from}{$to} :
+                       $statistics{$id_statistics}{each}{$lcode}{time_mask_from}{$to};
                     $val = compute_statistics(Operator=>$stat,Values=>\@array,Missing=>$missing);
                     my $valout = sprintf "%.5f", $val;
                     print CSV "$valout,$from,$to\n";

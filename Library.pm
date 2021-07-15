@@ -21,7 +21,8 @@ our @EXPORT = qw(
 
 );
 our @EXPORT_OK = qw();
-my $VERSION = '20210622'; # Added time_masks at lcode level
+my $VERSION = '20210715';   
+#my $VERSION = '20210622'; # Added time_masks at lcode level
 #my $VERSION = '20210526'; # Added statistics
 #my $VERSION = '20210407'; # CHO fix to _variable_node_index
 
@@ -68,6 +69,7 @@ sub load_statistics {
         $statistics{$id}{operator} = $statistics_in{$id}{operator};
 
         if (exists($statistics_in{$id}{time_mask})) {
+            $statistics{$id}{is_any} = 1;
             $statistics{$id}{time_mask} = $statistics_in{$id}{time_mask};
             # Read time_mask file
             my $mask_file = $statistics_in{$id}{time_mask};
@@ -77,6 +79,7 @@ sub load_statistics {
             my %stat = parse_time_mask(Lines=>\@lines);
             map { $statistics{$id}{any}{$_} = $stat{$_} } (@keys);
         } elsif (exists($statistics_in{$id}{time_masks_dir})) {
+            $statistics{$id}{is_any} = 0;
             # Read time_mask files (one for each station in pool file
             my @mask_files = get_files(Dir=>$statistics_in{$id}{time_masks_dir},Filter=>'\.tm');
             foreach my $mask_file (@mask_files) {
@@ -85,13 +88,12 @@ sub load_statistics {
                 open(INFO,"<$info_file") or die "$info_file: $!";
                 my @ilines = <INFO>;
                 close(INFO);
-                my @fields = split(",",$ilines[0]);
-                my $lcode = $ilines[0];
+                my @fields = split(",",$ilines[1]);
+                my $lcode = $fields[0];
                 my $mfile = "$statistics_in{$id}{time_masks_dir}/$name.tm";
                 open(MSK,"<$mfile") or die "$mfile: $!";
                 my @lines = <MSK>;
                 close(MSK);
-
                 my %stat = parse_time_mask(Lines=>\@lines);
                 map { $statistics{$id}{each}{$lcode}{$_} = $stat{$_} } (@keys);
             }
@@ -99,6 +101,9 @@ sub load_statistics {
             die "Please specify either time_masks_dir or time_mask for $id";
         }
     }
+
+    return %statistics;
+
 }
 
 #-----------------------------------------------------------------------------#
@@ -270,7 +275,23 @@ sub compute_statistics {
             }
         }
         $result = ($count > 0) ? $tot/$count : $missing;
+
+    } elsif (uc($operator) eq 'INT') {
+
+        my $tot = 0;
+        my $count = 0;
+        foreach my $vv (@values) {
+            unless  ($vv == $missing) {
+                $tot = $tot + $vv;
+                $count++;
+            }
+        }
+        $result = ($count > 0) ? $tot : $missing;
+    
+    } else {
+        die "$operator not implemented.";
     }
+
     return $result;
 
 }
@@ -486,7 +507,7 @@ sub _variable_node_index {
                    POSIX::floor( 0.5 + (($args{YmaxDomain} - $args{Y}) / $args{DyDomain}) ) * ( $args{NxDomain} * 14 + 1)
                  + POSIX::floor( 0.5 + (($args{X} - $args{XminDomain}) / $args{DxDomain}) * 14 )
               );
-    die $pos, Dumper \%args if ($pos < 0);
+    die Dumper \%args,$pos if ($pos < 0);
 
     #The starting byte is:
 
