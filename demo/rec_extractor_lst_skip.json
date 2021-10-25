@@ -1,0 +1,51 @@
+{
+    "_comment": "This is the input file to extract time series from grid ens files",
+    "sq": "0251",
+    "cs": "001",
+    "rl": "67",
+    "vr": "01",
+    "extract_utc": 0,
+    "models": [
+        10701
+    ],
+    "statistics": {
+      "01": {
+        "operator": "SKIP"          
+      },
+      "02": {
+        "time_masks_dir": "../../aqmeii4_generated_data/NA2016_SINGLE/GAS_AEROSOL/PM10/D",
+        "operator": "AVG"
+      },
+      "03": {
+        "time_mask": "./time_masks/mask.2016.monthly.csv",
+        "operator": "AVG"
+      },
+      "04": {
+        "time_mask": "./time_masks/mask.2016.period.csv",
+        "operator": "AVG"
+      },
+      "05": {
+        "time_mask": "./time_masks/mask.2016.hourly.csv",
+        "operator": "AVG"
+      }
+    },
+    "pool_file": "pool_files/na2016_pm10.csv",
+    "create_dirs": 1,
+    "vrmax": 4,
+    "home_dir": {
+        "src": "./src_files",
+        "bz2": "./bz2_files",
+        "ens": "./ens_files",
+        "dat": "./dat_files",
+        "out": "./out_files",
+        "json": "./json_files"
+    },
+    "executables": {
+        "deform": "./bin/deform_aq"
+    },
+    "go" : {
+        "bunzip2": 0,
+        "deform": 0,
+        "extract": 1
+    }
+}
