@@ -2,7 +2,8 @@ use strict;
 
 # Author: rbianconi@enviroware.com
 
-my $VERSION = '20210622';  # Now using .tm and .info files
+my $VERSION = '20211025';  # Set operator => 'SKIP' for $vr to suppress time series output
+#my $VERSION = '20210622';  # Now using .tm and .info files
 #my $VERSION = '20210615';  # LST conversion of UTC is optional - set extract_utc = 0/1 in json input
 #my $VERSION = '20210526'; # Added calculation of statistics
 #my $VERSION = '20210518'; # Fix to T indexing, manage dates in filenames
@@ -68,6 +69,11 @@ my $src_file = "$input{home_dir}{src}/$sq-$cs.src";
 
 # Load statistics
 my %statistics = load_statistics(Input=>$hinput);
+
+my $skip_vr_printout = 0;
+if (exists($statistics{$vr}{operator}) && ($statistics{$vr}{operator} eq 'SKIP')) {
+    $skip_vr_printout = 1;
+}
 
 # Loop on models
 my @models = @{$input{models}};
@@ -208,7 +214,10 @@ foreach my $mo (@models) {
                             Ts => \@ts,
                             Domain => \%sq_json);
             my $out_file = "$out_folder/$lcode-$mo-$sq-$cs-$rl-$vr.csv";
-            open(OUT,">$out_file") or die "$out_file:$!";
+
+             if ($skip_vr_printout > 0) {
+                open(OUT,">$out_file") or die "$out_file:$!";
+            }
 
             my %varrays;
             # Loop on indexes from 1 to nt
@@ -240,7 +249,10 @@ foreach my $mo (@models) {
 
                 # Format value with precision
                 my $valpout = sprintf "%.${decimals}f", $valp;
-                print OUT "$valpout,$fdate_lst,$tdate_lst\n";
+
+                if ($skip_vr_printout > 0) {
+                    print OUT "$valpout,$fdate_lst,$tdate_lst\n";
+                }
 
                 # Store values for statistics
                 foreach my $id_statistics (keys %statistics) {
@@ -263,7 +275,9 @@ foreach my $mo (@models) {
             }
 
             # Save time series 
-            close (OUT);
+            if ($skip_vr_printout > 0) {
+                close (OUT);
+            }            
 
             # Apply statistics
             foreach my $id_statistics (keys %statistics) {
@@ -273,6 +287,7 @@ foreach my $mo (@models) {
                 my $stat = $statistics{$id_statistics}{operator};
 
                 next unless ($stat); # This will skip 01 that is an empty hash
+                next if ($stat eq 'SKIP'); # 
                 my $out_folder = "$input{home_dir}{out}/$sq/$cs/$rl/$id_statistics/$mo";
                 mkpath $out_folder unless (-e $out_folder);
                 my $out_file = "$out_folder/$lcode-$mo-$sq-$cs-$rl-$id_statistics.csv";

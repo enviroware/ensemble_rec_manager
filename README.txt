@@ -121,7 +121,9 @@ time_mask specific to each site, based on LCODE
 This is the operator applied to the extracted model data. Currently implemented:
 AVG --> average of model values within time window 
 INT --> sum of model values within time window 
-
+SKIP --> when applied to the vr variable (e.g. 01), it suppresses the creation of
+         of the file with the data extracted from the model
+         
 
 ** extract_utc
 If"extract_utc: 1" the time shift from UTC to LST won't be made.
