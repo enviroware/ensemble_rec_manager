@@ -2,7 +2,7 @@ use strict;
 
 # Author: rbianconi@enviroware.com
 
-my $VERSION = '20211025';  # Set operator => 'SKIP' for $vr to suppress time series output
+my $VERSION = '20211102';  # Set operator => 'SKIP' for $vr to suppress time series output
 #my $VERSION = '20210622';  # Now using .tm and .info files
 #my $VERSION = '20210615';  # LST conversion of UTC is optional - set extract_utc = 0/1 in json input
 #my $VERSION = '20210526'; # Added calculation of statistics
@@ -215,7 +215,7 @@ foreach my $mo (@models) {
                             Domain => \%sq_json);
             my $out_file = "$out_folder/$lcode-$mo-$sq-$cs-$rl-$vr.csv";
 
-             if ($skip_vr_printout > 0) {
+             if ($skip_vr_printout == 0) {
                 open(OUT,">$out_file") or die "$out_file:$!";
             }
 
@@ -250,7 +250,7 @@ foreach my $mo (@models) {
                 # Format value with precision
                 my $valpout = sprintf "%.${decimals}f", $valp;
 
-                if ($skip_vr_printout > 0) {
+                if ($skip_vr_printout == 0) {
                     print OUT "$valpout,$fdate_lst,$tdate_lst\n";
                 }
 
@@ -275,7 +275,7 @@ foreach my $mo (@models) {
             }
 
             # Save time series 
-            if ($skip_vr_printout > 0) {
+            if ($skip_vr_printout == 0) {
                 close (OUT);
             }            
 
@@ -286,7 +286,7 @@ foreach my $mo (@models) {
 
                 my $stat = $statistics{$id_statistics}{operator};
 
-                next unless ($stat); # This will skip 01 that is an empty hash
+                next unless ($stat); # This will skip 01 when it is an empty hash
                 next if ($stat eq 'SKIP'); # 
                 my $out_folder = "$input{home_dir}{out}/$sq/$cs/$rl/$id_statistics/$mo";
                 mkpath $out_folder unless (-e $out_folder);
