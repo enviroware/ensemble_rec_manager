@@ -21,7 +21,8 @@ our @EXPORT = qw(
 
 );
 our @EXPORT_OK = qw();
-my $VERSION = '20210715';   
+my $VERSION = '20211116'; # Store operator for variable 01
+# my $VERSION = '20210715';   
 #my $VERSION = '20210622'; # Added time_masks at lcode level
 #my $VERSION = '20210526'; # Added statistics
 #my $VERSION = '20210407'; # CHO fix to _variable_node_index
@@ -63,10 +64,10 @@ sub load_statistics {
 
     foreach my $id (@ids) {
 
-        # Skip var=01 because they are hourly values
-        next if ($id eq '01');
-
         $statistics{$id}{operator} = $statistics_in{$id}{operator};
+        # Skip var=01 because they are hourly values - but store operator
+        # because it may be SKIP
+        next if ($id eq '01');
 
         if (exists($statistics_in{$id}{time_mask})) {
             $statistics{$id}{is_any} = 1;
